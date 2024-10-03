@@ -1,6 +1,7 @@
 import { ElevenLabsClient } from "elevenlabs";
 import { createWriteStream, createReadStream } from "fs";
 import { NextRequest, NextResponse } from "next/server";
+import { join } from "path";
 
 const client = new ElevenLabsClient({
     apiKey: process.env.ELEVENLABS_API_KEY,
@@ -16,7 +17,7 @@ export const createAudioFileFromText = async (
                 model_id: "eleven_turbo_v2",
                 text,
             });
-            const fileName = `input.mp3`;
+            const fileName = join('/tmp', 'input.mp3');
             const fileStream = createWriteStream(fileName);
 
             audio.pipe(fileStream);
