@@ -28,12 +28,6 @@ export const createAudioFileFromText = async (
     });
 };
 
-export const config = {
-    api: {
-        bodyParser: false,
-    },
-};
-
 export async function POST(req: NextRequest) {
     try {
         const buffer = await req.arrayBuffer();

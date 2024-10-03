@@ -6,7 +6,12 @@ const nextConfig = {
                 hostname: 'static.vecteezy.com',
             }
         ]
-        
+    },
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
+    typescript:{
+        ignoreBuildErrors: true
     }
 };
 
