@@ -62,7 +62,7 @@ export async function POST(req: NextRequest) {
         const response = await run("@cf/openai/whisper", buffer);
         const { text } = response.result;
 
-        console.log(text);
+        console.log("Text from Voice is :", text);
 
         // Create audio file from text and get the filename
         const audioFileName = await createAudioFileFromText(text);
