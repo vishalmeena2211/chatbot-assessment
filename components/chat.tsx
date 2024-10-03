@@ -1,6 +1,6 @@
 "use client"
 
-import { PaperPlaneIcon, ChatBubbleIcon, Cross1Icon } from "@radix-ui/react-icons"; // Import ChatIcon for the floating button
+import { PaperPlaneIcon, ChatBubbleIcon, Cross1Icon } from "@radix-ui/react-icons"; 
 import { cn } from "@/lib/utils";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";

@@ -16,11 +16,11 @@ export const createAudioFileFromText = async (
                 model_id: "eleven_turbo_v2",
                 text,
             });
-            const fileName = `output.mp3`;
+            const fileName = `input.mp3`;
             const fileStream = createWriteStream(fileName);
 
             audio.pipe(fileStream);
-            fileStream.on("finish", () => resolve(fileName)); 
+            fileStream.on("finish", () => resolve(fileName));
             fileStream.on("error", reject);
         } catch (error) {
             reject(error);
